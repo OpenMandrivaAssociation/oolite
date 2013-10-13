@@ -1,3 +1,5 @@
+%define debug_package %{nil}
+
 Name:		oolite
 Version:	1.77.1
 Release:	1
