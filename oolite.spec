@@ -15,10 +15,18 @@ BuildRequires:	gnustep-base-devel
 BuildRequires:	gnustep-make
 BuildRequires:	libespeak-devel
 BuildRequires:	libffcall
+%ifarch i586
 BuildRequires:	libgif-devel
 BuildRequires:	libgmp-devel
 BuildRequires:	libobjc-devel
 BuildRequires:	libstdc++-devel
+%endif
+%ifarch x86_64
+BuildRequires:	lib64gif-devel
+BuildRequires:	lib64gmp-devel
+BuildRequires:	lib64objc-devel
+BuildRequires:	lib64stdc++-devel
+%endif
 BuildRequires:	pkgconfig(sdl)
 BuildRequires:	pkgconfig(SDL_mixer)
 BuildRequires:	pkgconfig(SDL_image)
