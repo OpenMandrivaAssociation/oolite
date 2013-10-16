@@ -1,42 +1,34 @@
 %define debug_package %{nil}
 
+Summary:	A user-modifiable three-dimensional space trading and combat game
 Name:		oolite
 Version:	1.77.1
 Release:	1
-Summary:	A user-modifiable three-dimensional space trading and combat game
 Group:		Games/Other
-License:	GPLv2
+License:	GPLv2+
 Url:		http://www.oolite.org
 Source0:	%{name}-source-%{version}.tar.bz2
 Source1:	http://jens.ayton.se/oolite/deps/firefox-4.0.source.js-only.tbz
 Source2:	%{name}.desktop
-Patch:		oolite-1.77.1.patch
+Patch0:		oolite-1.77.1.patch
 BuildRequires:	gcc-c++
 BuildRequires:	gcc-objc
 BuildRequires:	gnustep-base-devel
 BuildRequires:	gnustep-make
+BuildRequires:	ffcall-devel
+BuildRequires:	giflib-devel
+BuildRequires:	gmp-devel
 BuildRequires:	libespeak-devel
-BuildRequires:	libffcall
-%ifarch i586
-BuildRequires:	libgif-devel
-BuildRequires:	libgmp-devel
-BuildRequires:	libobjc-devel
-BuildRequires:	libstdc++-devel
-%endif
-%ifarch x86_64
-BuildRequires:	lib64gif-devel
-BuildRequires:	lib64gmp-devel
-BuildRequires:	lib64objc-devel
-BuildRequires:	lib64stdc++-devel
-%endif
-BuildRequires:	pkgconfig(sdl)
-BuildRequires:	pkgconfig(SDL_mixer)
-BuildRequires:	pkgconfig(SDL_image)
-BuildRequires:	pkgconfig(libpng)
-BuildRequires:	pkgconfig(nspr)
+BuildRequires:	objc-devel
+BuildRequires:	stdc++-devel
 BuildRequires:	pkgconfig(glu)
+BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(libtiff-4)
 BuildRequires:	pkgconfig(mozjs185)
+BuildRequires:	pkgconfig(nspr)
+BuildRequires:	pkgconfig(sdl)
+BuildRequires:	pkgconfig(SDL_image)
+BuildRequires:	pkgconfig(SDL_mixer)
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	zip
 Requires:	gnustep-base
@@ -49,7 +41,7 @@ simple, free graphics packages and text editors.
 
 %prep
 %setup -q -n %{name}-source-%{version}
-%patch -p1
+%patch0 -p1
 
 mkdir -p deps/Cross-platform-deps/mozilla
 tar -C deps/Cross-platform-deps/mozilla -xjf %{SOURCE1} --strip-components 1
