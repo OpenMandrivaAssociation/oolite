@@ -2,7 +2,7 @@
 
 Name:		oolite
 Version:	1.77.1
-Release:	1
+Release:	2
 Summary:	A user-modifiable three-dimensional space trading and combat game
 Group:		Games/Other
 License:	GPLv2
