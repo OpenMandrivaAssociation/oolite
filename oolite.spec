@@ -47,6 +47,8 @@ mkdir -p deps/Cross-platform-deps/mozilla
 tar -C deps/Cross-platform-deps/mozilla -xjf %{SOURCE1} --strip-components 1
 
 %build
+export CC=gcc
+export CXX=g++
 . /usr/share/GNUstep/Makefiles/GNUstep.sh
 %make -f libjs.make
 %make
