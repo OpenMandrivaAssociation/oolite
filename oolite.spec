@@ -29,6 +29,7 @@ BuildRequires:	pkgconfig(nspr)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(libtiff-4)
 BuildRequires:	pkgconfig(mozjs185)
+BuildRequires:	pkgconfig(openal)
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	zip
 Requires:	gnustep-base
