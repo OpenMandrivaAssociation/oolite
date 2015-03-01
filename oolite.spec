@@ -44,12 +44,10 @@ simple, free graphics packages and text editors.
 %setup -q -n %{name}-source-%{version}
 %apply_patches
 
-mkdir -p deps/Cross-platform-deps/mozilla
-tar -C deps/Cross-platform-deps/mozilla -xjf %{SOURCE1} --strip-components 1
-
 %build
 export CC=gcc
 export CXX=g++
+%setup_compile_flags
 . /usr/share/GNUstep/Makefiles/GNUstep.sh
 %make -f libjs.make
 %make
