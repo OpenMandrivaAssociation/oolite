@@ -3,7 +3,7 @@
 
 Name:		oolite
 Version:	1.82
-Release:	1
+Release:	2
 Summary:	A user-modifiable three-dimensional space trading and combat game
 Group:		Games/Other
 License:	GPLv2
@@ -54,13 +54,11 @@ export CXX=g++
 %make OO_JAVASCRIPT_TRACE=no
 
 %install
-install -d %{buildroot}%{_libdir}/%{name}/Contents
 install -d %{buildroot}%{_libdir}/%{name}/Resources
 install -m 755 %{name}.app/%{name}* %{buildroot}%{_libdir}/%{name}
-install -m 644 %{name}.app/Resources/Info-gnustep.plist %{buildroot}%{_libdir}/%{name}/Resources
 mkdir -p %{buildroot}%{_gamesbindir}
 ln -s %{_libdir}/%{name}/%{name} %{buildroot}%{_gamesbindir}/%{name}
-cp -pr Resources/* %{buildroot}%{_libdir}/%{name}/Resources
+cp -pr %{name}.app/Resources/* %{buildroot}%{_libdir}/%{name}/Resources
 mkdir -p %{buildroot}%{_datadir}/applications
 
 cat << EOF > %buildroot%{_datadir}/applications/%{name}.desktop
