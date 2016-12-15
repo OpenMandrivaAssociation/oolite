@@ -3,7 +3,7 @@
 
 Name:		oolite
 Version:	1.84
-Release:	1
+Release:	2
 Summary:	A user-modifiable three-dimensional space trading and combat game
 Group:		Games/Other
 License:	GPLv2
@@ -13,6 +13,7 @@ Source1:	http://jens.ayton.se/oolite/deps/firefox-4.0.source.js-only.tbz
 Patch0:		oolite-1.80.patch
 Patch2:		oolite-1.80-ext_libmozjs.patch
 Patch3:		oolite-1.80-use_byte_order_of_sys_param.patch
+Patch4:		initialize-nsdate-before-threads-locks.diff
 BuildRequires:	gcc-c++
 BuildRequires:	gcc-objc
 BuildRequires:	gnustep-base-devel
