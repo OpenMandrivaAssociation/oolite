@@ -2,13 +2,13 @@
 %define Werror_cflags %{nil}
 
 Name:		oolite
-Version:	1.82
-Release:	2
+Version:	1.84
+Release:	1
 Summary:	A user-modifiable three-dimensional space trading and combat game
 Group:		Games/Other
 License:	GPLv2
 Url:		http://www.oolite.org
-Source0:	%{name}-source-%{version}.tar.bz2
+Source0:	https://github.com/OoliteProject/oolite/releases/download/%{version}/%{name}-source-%{version}.tar.bz2
 Source1:	http://jens.ayton.se/oolite/deps/firefox-4.0.source.js-only.tbz
 Patch0:		oolite-1.80.patch
 Patch2:		oolite-1.80-ext_libmozjs.patch
@@ -74,7 +74,7 @@ Icon=%{_libdir}/%{name}/Resources/Images/WMicon.bmp
 EOF
 
 %files
-%doc README.txt
+%doc README.md
 %doc Doc/*
 %{_gamesbindir}/%{name}
 %{_libdir}/%{name}
