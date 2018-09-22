@@ -18,7 +18,6 @@ BuildRequires:	gcc-objc
 BuildRequires:	gnustep-base-devel
 BuildRequires:	gnustep-make
 BuildRequires:	espeak-devel
-BuildRequires:	ffcall-devel
 BuildRequires:	giflib-devel
 BuildRequires:	gmp-devel
 BuildRequires:	objc-devel
