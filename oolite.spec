@@ -33,6 +33,7 @@ BuildRequires:	pkgconfig(libtiff-4)
 BuildRequires:	pkgconfig(mozjs185)
 BuildRequires:	pkgconfig(openal)
 BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(vorbisfile)
 BuildRequires:	zip
 Requires:	gnustep-base
 
