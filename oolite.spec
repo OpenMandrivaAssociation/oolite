@@ -2,7 +2,7 @@
 %define Werror_cflags %{nil}
 
 Name:		oolite
-Version:	1.86
+Version:	1.88
 Release:	1
 Summary:	A user-modifiable three-dimensional space trading and combat game
 Group:		Games/Other
