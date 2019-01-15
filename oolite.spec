@@ -9,7 +9,6 @@ Group:		Games/Other
 License:	GPLv2
 Url:		http://www.oolite.org
 Source0:	https://github.com/OoliteProject/oolite/releases/download/%{version}/%{name}-source-%{version}.tar.bz2
-Source1:	http://jens.ayton.se/oolite/deps/firefox-4.0.source.js-only.tbz
 Patch0:		oolite-1.80.patch
 Patch2:		oolite-1.80-ext_libmozjs.patch
 Patch3:		oolite-1.80-use_byte_order_of_sys_param.patch
