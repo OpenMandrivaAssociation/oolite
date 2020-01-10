@@ -44,7 +44,7 @@ simple, free graphics packages and text editors.
 
 %prep
 %setup -q -n %{name}-source-%{version}
-%apply_patches
+%autopatch -p1
 
 %build
 export CC=gcc
