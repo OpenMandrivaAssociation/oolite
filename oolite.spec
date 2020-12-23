@@ -2,15 +2,15 @@
 %define Werror_cflags %{nil}
 
 Name:		oolite
-Version:	1.88
+Version:	1.90
 Release:	1
 Summary:	A user-modifiable three-dimensional space trading and combat game
 Group:		Games/Other
 License:	GPLv2
 Url:		http://www.oolite.org
 Source0:	https://github.com/OoliteProject/oolite/releases/download/%{version}/%{name}-source-%{version}.tar.bz2
-Patch0:		oolite-1.80.patch
-Patch2:		oolite-1.80-ext_libmozjs.patch
+#Patch0:		oolite-1.90.patch
+Patch2:		oolite-1.90-ext_libmozjs.patch
 Patch3:		oolite-1.80-use_byte_order_of_sys_param.patch
 BuildRequires:	gcc-c++
 BuildRequires:	gcc-objc
@@ -29,7 +29,7 @@ BuildRequires:	pkgconfig(nspr)
 BuildRequires:	pkgconfig(egl)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(libtiff-4)
-BuildRequires:	pkgconfig(mozjs185)
+BuildRequires:  pkgconfig(mozjs185)
 BuildRequires:	pkgconfig(openal)
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(vorbisfile)
