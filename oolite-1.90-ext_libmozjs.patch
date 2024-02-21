@@ -188,7 +188,7 @@ Forwarded: Michael Werle <micha@michaelwerle.com>
 -    ADDITIONAL_CFLAGS            = -Wall -DLINUX -DNEED_STRLCPY `sdl-config --cflags` `nspr-config --cflags`
 +    ADDITIONAL_INCLUDE_DIRS      = -Isrc/SDL -Isrc/Core -Isrc/BSDCompat -Isrc/Core/Scripting -Isrc/Core/Materials -Isrc/Core/Entities -Isrc/Core/OXPVerifier -Isrc/Core/Debug -Isrc/Core/Tables -Isrc/Core/MiniZip -Ideps/Linux-deps/include 
 +    ADDITIONAL_OBJC_LIBS         = -lgnustep-base -lstdc++ -lz
-+    ADDITIONAL_OBJCFLAGS         = -Wall -std=gnu99 -DLOADSAVEGUI -DLINUX -DXP_UNIX -Wno-import -fobjc-exceptions -Wno-error=format-security
++    ADDITIONAL_OBJCFLAGS         = -Wall -std=gnu99 -DLOADSAVEGUI -DLINUX -DXP_UNIX -Wno-import -Wno-error=format-security -Wno-incompatible-function-pointer-types
 +    ADDITIONAL_CFLAGS            = -Wall -DLINUX -DNEED_STRLCPY -Wno-error=format-security
  
      ifeq ($(ESPEAK),yes)
@@ -197,7 +197,7 @@ Forwarded: Michael Werle <micha@michaelwerle.com>
      ifeq ($(OO_JAVASCRIPT_TRACE),yes)
          ADDITIONAL_OBJCFLAGS     += -DMOZ_TRACE_JSCALLS=1
      endif
-+    PKG_CONFIG_LIBRARIES         += glu gl x11 sdl SDL_mixer mozjs185 nspr openal vorbisfile
++    PKG_CONFIG_LIBRARIES         += glu gl x11 sdl SDL_mixer mozjs185 nspr openal vorbisfile libpng libobjc
 +    PKG_CONFIG_CFLAGS := `pkg-config --cflags $(PKG_CONFIG_LIBRARIES)`
 +    PKG_CONFIG_LDLIBS := `pkg-config --libs   $(PKG_CONFIG_LIBRARIES)`
 +    ADDITIONAL_OBJC_LIBS         += $(PKG_CONFIG_LDLIBS)

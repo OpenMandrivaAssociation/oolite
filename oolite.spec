@@ -1,5 +1,5 @@
 %define debug_package %{nil}
-%define Werror_cflags %{nil}
+%define Werror_cflags -Wno-incompatible-function-pointer-types
 
 Name:		oolite
 Version:	1.90
@@ -13,13 +13,12 @@ Source0:	https://github.com/OoliteProject/oolite/releases/download/%{version}/%{
 Patch2:		oolite-1.90-ext_libmozjs.patch
 Patch3:		oolite-1.80-use_byte_order_of_sys_param.patch
 BuildRequires:	gcc-c++
-BuildRequires:	gcc-objc
 BuildRequires:	gnustep-base-devel
 BuildRequires:	gnustep-make
 BuildRequires:	espeak-devel
 BuildRequires:	giflib-devel
 BuildRequires:	gmp-devel
-BuildRequires:	objc-devel
+BuildRequires:	pkgconfig(libobjc)
 BuildRequires:	stdc++-devel
 BuildRequires:	pkgconfig(sdl)
 BuildRequires:	pkgconfig(SDL_mixer)
@@ -47,11 +46,11 @@ simple, free graphics packages and text editors.
 %autopatch -p1
 
 %build
-export CC=gcc
-export CXX=g++
-%setup_compile_flags
+#export CC=gcc
+#export CXX=g++
+#set_build_flags
 . /usr/share/GNUstep/Makefiles/GNUstep.sh
-%make OO_JAVASCRIPT_TRACE=no
+%make_build DEPLOYMENT_RELEASE_CONFIGURATION=yes OO_JAVASCRIPT_TRACE=no VERBOSE=1
 
 %install
 install -d %{buildroot}%{_libdir}/%{name}/Resources
