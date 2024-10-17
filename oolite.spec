@@ -7,7 +7,7 @@ Release:	2
 Summary:	A user-modifiable three-dimensional space trading and combat game
 Group:		Games/Other
 License:	GPLv2
-Url:		http://www.oolite.org
+Url:		https://www.oolite.org
 Source0:	https://github.com/OoliteProject/oolite/releases/download/%{version}/%{name}-source-%{version}.tar.bz2
 #Patch0:		oolite-1.90.patch
 Patch2:		oolite-1.90-ext_libmozjs.patch
