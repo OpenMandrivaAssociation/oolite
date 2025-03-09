@@ -12,6 +12,7 @@ Source0:	https://github.com/OoliteProject/oolite/releases/download/%{version}/%{
 #Patch0:		oolite-1.90.patch
 Patch2:		oolite-1.90-ext_libmozjs.patch
 Patch3:		oolite-1.80-use_byte_order_of_sys_param.patch
+Patch4:		oolite-1.90-non-x86.patch
 BuildRequires:	gcc-c++
 BuildRequires:	gnustep-base-devel
 BuildRequires:	gnustep-make
@@ -42,8 +43,7 @@ and expand upon. Almost every aspect of the game can be changed by using
 simple, free graphics packages and text editors.
 
 %prep
-%setup -q -n %{name}-source-%{version}
-%autopatch -p1
+%autosetup -p1 -n %{name}-source-%{version}
 
 %build
 #export CC=gcc
